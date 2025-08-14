@@ -30,9 +30,9 @@ STEP 11: Check all the Functionalities working
 
 
 
-IF ERROR ACCORS :
+IF ERROR OCCORS :
 
-  1 . While registering the new student or admin after clicking the register button it may through error table is not avialable for that open Project settings.py file in that go to             DATABASES change the name(Database name)
+  1 . While registering the new student or admin after clicking the register button it may through error table is not avialable for that open Project settings.py file in that go to DATABASES change the name(Database name)
 
   2 . Open mysql workbench create a new database with the name mentioned in the Databases
  
