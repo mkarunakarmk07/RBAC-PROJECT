@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>welcome to employee list</h1>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Emp Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Role</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for employee in employees %}
+    <tr>
+      <th scope="row">{{ employee.id }}</th>
+      <td>{{ employee.username }}</td>
+      <td>{{ employee.email }}</td>
+      <td>{{ employee.role }}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

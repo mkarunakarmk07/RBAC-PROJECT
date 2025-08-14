@@ -1,0 +1,49 @@
+STEP 1 : Download the zip file and extract the file 
+
+STEP 2 : Create a new Folder with Proper name and Paste the file in that folder
+
+STEP 3 : Open the Folder and open command prompt type the command 
+          1. cd ..(the command is used to move one step back)
+
+STEP 4 : Create a new environment for the project in command prompt
+         2. install virtualvenv
+         3. virtualvenv name(Any name)	
+
+STEP 5 : Activate the environment using the command in command prompt
+         4. name\Scripts\activate
+
+STEP 6 : After activating the environment download the django 
+         5. pip install django 
+
+STEP 7 : Load the Project in pycharm and open the terminal in pycharm 
+
+STEP 8 : Activate the environment in  terminal using command
+         1. cd ..
+         2. name\Scripts\activate
+
+STEP 9 : After activating the environment then type the command in terminal 
+         3. python manage.py runserver
+          
+STEP 10: A link genarate like http://127.0.0.1:8000/ click on that it will redirect to Login page
+
+STEP 11: Check all the Functionalities working 
+
+
+
+IF ERROR ACCORS :
+
+  1 . While registering the new student or admin after clicking the register button it may through error table is not avialable for that open Project settings.py file in that go to             DATABASES change the name(Database name)
+
+  2 . Open mysql workbench create a new database with the name mentioned in the Databases
+ 
+  3 . Open terminal in pycharm type the command then enter 
+      1 . python manage.py makemigrations (this command is used to create querry for the table)
+      2 . python manage.py migrate (this command is used to execute querry)
+  
+  4 . Then the runserver in the terminal
+       python manage.py runserver
+   
+  5 . Then click the link and check all the functionality working or not.  
+    
+ 
+          

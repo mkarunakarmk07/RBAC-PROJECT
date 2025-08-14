@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>welcome to student list</h1>
+{% csrf_token %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">coordinator</th>
+        <th scope="col">name</th>
+      <th scope="col">email</th>
+      <th scope="col">age</th>
+      <th scope="col">place</th>
+        <th scope="col">gender</th>
+      <th scope="col">skillset</th>
+      <th scope="col">state</th>
+        {% if request.user.role == 'admin' %}
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+        {% endif %}
+    </tr>
+  </thead>
+  <tbody>
+{% for student in student_data %}
+  <tr>
+      <th scope="row">{{ student.id }}</th>
+      <th>{{ student.added_by.username }}</th>
+      <td>{{ student.name }}</td>
+      <td>{{ student.email }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.place }}</td>
+      <td>{{ student.gender }}</td>
+      <td>{{ student.skillset }}</td>
+      <td>{{ student.state }}</td>
+      {% if request.user.role == 'admin' %}
+       <td><a href="{% url 'update' student.id %}" class="button">update</a></td>
+       <td><a href="{% url 'delete' student.id %}" class="button">delete</a></td>
+       {% endif %}
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
